@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Servicios</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylecarrito.css">
+    <style>
+        .removed-services {
+            margin-top: 30px;
+        }
+        .removed-services .removed-container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .removed-services button {
+            margin: 5px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header class="cart-header">
+        <h1>Contrata tu servicio preferido</h1>
+    </header>
+
+    <section class="cart-section">
+        <div class="container">
+            <!-- Tabla de servicios contratados -->
+            <table class="cart-table table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Subtotal</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Internet de Alta Velocidad (800 megas)</td>
+                        <td>Conexión rápida y confiable para tu hogar. (con un alcance de 100 metros cuadrados)</td>
+                        <td class="price" data-price="440000">$440.000,00</td>
+                        <td class="total-price">$440.000,00</td>
+                        <td><a href="#" class="remove-item-btn">Eliminar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Paquete de Telefonía Móvil</td>
+                        <td>Plan nacional e internacional. (para 10 líneas celulares)</td>
+                        <td class="price" data-price="220000">$220.000,00</td>
+                        <td class="total-price">$220.000,00</td>
+                        <td><a href="#" class="remove-item-btn">Eliminar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Intranet segura</td>
+                        <td>Conexión privada y confiable para tu empresa.</td>
+                        <td class="price" data-price="140000">$140.000,00</td>
+                        <td class="total-price">$140.000,00</td>
+                        <td><a href="#" class="remove-item-btn">Eliminar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Total general -->
+            <div class="cart-total">
+                <h3>Total: $<span id="grand-total">800.000,00</span></h3>
+               <a href="https://wa.me/541159307167?text=Hola,%20quiero%20mas%20informaci%C3%B3n%20sobre%20sus%20servicios">
+             <button class="checkout-btn btn btn-primary",>Proceder al Contrato del servicio</button></a>
+            </div>
+            <div id="wallet_container"></div>
+
+            <!-- Sección de servicios eliminados con cuadro similar -->
+            <div class="removed-services mt-4">
+                <div class="removed-container">
+                    <h4>Servicios eliminados</h4>
+                    <ul id="removed-services-list">
+                        <!-- Los servicios eliminados aparecerán aquí -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer mt-4">
+        <div class="footer-bottom text-center">
+            <p>&copy; 2024 Telecomunicaciones "GB" Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/servicios.js"></script>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+</body>
+</html>

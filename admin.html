@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Clientes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleadmin.css">
+    <style> </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Panel de Administración</h1>
+            </div>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cuadro de Información de Clientes -->
+    <section class="info-box">
+        <h2>Información de Clientes Potenciales</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo Electrónico</th>
+                    <th>Teléfono</th>
+                    <th>Servicio Solicitado</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="clientes-table-body">
+                <!-- Los datos se cargarán dinámicamente aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Enlace a Firebase JS SDK -->
+    <script type="module">
+        const clientes = [
+            {
+                nombre: "Nicolas Herrero",
+                correo: "nicoherrero998@gmail.com",
+                telefono: "1159307167",
+                servicio: "Asesoría en Telecomunicaciones",
+               
+            },
+            {
+                nombre: "Claudia Benitez",
+                correo: "clauxp@hotmail.com",
+                telefono: "1136948630",
+                servicio: "Instalación de Internet",
+           
+            },
+            {
+                nombre: "Carlos Martínez",
+                correo: "carlos.martinez@email.com",
+                telefono: "1167853496",
+                servicio: "Mantenimiento red empresarial",
+            },
+            {
+                nombre: "Laura Sánchez",
+                correo: "laura.sanchez@email.com",
+                telefono: "1153679428",
+                servicio: "Asesoría en Telefonía",
+            }
+        ];
+
+        // Función para agregar los clientes a la tabla
+        function agregarClientes() {
+            const tableBody = document.getElementById("clientes-table-body");
+
+            // Limpiar cualquier contenido anterior
+            tableBody.innerHTML = "";
+
+            // Recorrer la lista de clientes y agregar cada uno a la tabla
+            clientes.forEach(cliente => {
+                const row = document.createElement("tr");
+
+                const nombreCell = document.createElement("td");
+                nombreCell.textContent = cliente.nombre;
+
+                const correoCell = document.createElement("td");
+                correoCell.textContent = cliente.correo;
+
+                const telefonoCell = document.createElement("td");
+                telefonoCell.textContent = cliente.telefono;
+
+                const servicioCell = document.createElement("td");
+                servicioCell.textContent = cliente.servicio;
+
+                
+
+                // Agregar las celdas a la fila
+                row.appendChild(nombreCell);
+                row.appendChild(correoCell);
+                row.appendChild(telefonoCell);
+                row.appendChild(servicioCell);
+                
+
+                // Agregar la fila a la tabla
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Llamar a la función para agregar los clientes cuando se carga la página
+        agregarClientes();
+
+    </script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
+

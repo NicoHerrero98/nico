@@ -1,0 +1,91 @@
+
+        /* Estilos personalizados para el carrito */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('/imagen\ de\ fondo.png') no-repeat center center fixed;
+            background-size: cover ;
+            color: #fff;
+        }
+        .cart-header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cart-section {
+            padding: 100px 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .cart-table {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #fff;
+            border-collapse: collapse;
+        }
+
+        .cart-table th, .cart-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .cart-table th {
+            background-color: #333;
+            font-weight: bold;
+        }
+
+        .cart-total {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .checkout-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .checkout-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .remove-item-btn {
+            color: #dc3545;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .remove-item-btn:hover {
+            text-decoration: underline;
+        }
+    footer {
+    color: white;
+    background-color: #333;
+    text-align: center;
+     }
+     /* Estilos adicionales */
+     .removed-services {
+        margin-top: 30px;
+    }
+    .removed-services .removed-container {
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 0px;
+        background-color: #f9f9f9;
+    }
+    .removed-services button {
+        margin: 5px 0;
+        display: block;
+    }
+
+    h4 {
+        text-align: center;
+        color: #050000;        
+    }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Administrador</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/acceso.css">
+    <style></style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido, Administrador</h1>
+            <p>Ingrese su CUIT y contraseña para continuar.</p>
+        </div>
+    </section>
+
+    <section class="d-flex justify-content-center align-items-center" style="height: 60vh;">
+        <div class="login-container">
+            <h2>Acceso Administrador</h2>
+            <form id="loginForm" class="form-group" onsubmit="return login(event)">
+                <input type="text" id="cuit" name="cuit" class="form-control" placeholder="Ingrese CUIT" required>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                <div class="error text-danger mt-3" id="errorMessage"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/acceso.js"></script>
+
+    <script></script>
+
+</body>
+</html>
+
+    
